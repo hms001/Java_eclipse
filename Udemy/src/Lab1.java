@@ -3,7 +3,7 @@ public class Lab1 {
 
 	public static void main(String[] args) {
 		
-		System.out.println(sumNum(4));
+		System.out.println(sumNum(20));
 	}
 	
 	public static int sumNum(int n) {
