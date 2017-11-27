@@ -1,0 +1,50 @@
+package lab2;
+
+import java.util.*;
+
+public class Student{
+	
+	private static int id = 12;
+	private String name;
+	private String city;
+	private String state;
+	private String phone;
+	private String SSN;
+	private String userID;
+	private static final double fees = 12000.0;
+	
+	Random generator = new Random();
+	
+	public Student(String name,String SSN) {
+		this.SSN = SSN;
+		System.out.println("E-mail :- " + name + "@email.com");
+		id++;
+		setUserID();
+	}
+	
+	private void setUserID() {
+		
+		int random = generator.nextInt(9000-1000+1)+1000;
+		userID = id + "" +random + SSN.substring(3);
+		System.out.println("User ID :- " + userID);
+	}
+	
+	private void enroll(String name) {
+		this.name = name;
+		System.out.println("Enrolled " + name);
+	}
+
+	public double pay(double amount) {
+		balance = balance - amount;
+		return balance;
+	}
+
+	public double checkBalance() {
+		
+		return 0;
+	}
+	
+	
+	
+
+}

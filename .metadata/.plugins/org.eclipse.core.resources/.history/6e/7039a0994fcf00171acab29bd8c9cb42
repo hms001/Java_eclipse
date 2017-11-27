@@ -1,0 +1,14 @@
+
+public class Lab1 {
+
+	public static void main(String[] args) {
+		
+		sumNum(4);
+	}
+	
+	public static int sumNum(int n) {
+		
+		return n+1;
+	}
+
+}

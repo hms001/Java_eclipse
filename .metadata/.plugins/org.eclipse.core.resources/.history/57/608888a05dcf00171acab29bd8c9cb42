@@ -1,0 +1,33 @@
+
+public class Lab1Q3 {
+
+	public static void main(String[] args) {
+		
+		int[] parameter = {10,22,8,13};
+		int max = Maximum(parameter);
+		int min = Minimum(parameter);
+		System.out.println("Maximum number of array is : " + max);
+		System.out.println("Maximum number of array is : " + min);
+	}
+	
+	public static int Maximum(int[] first) {
+		int max = first[0];
+		for(int i=0; i<first.length; i++) {
+			if(first[i] > max) {
+				max = first[i];
+			}
+		}
+		return max;
+	}
+	
+	public static int Minimum(int[] sec) {
+		int min = sec[0];
+		for(int i=0; i < sec.length; i++) {
+			if(sec[i] < min) {
+				min = sec[i];
+			}
+		}
+		return min;
+	}
+
+}

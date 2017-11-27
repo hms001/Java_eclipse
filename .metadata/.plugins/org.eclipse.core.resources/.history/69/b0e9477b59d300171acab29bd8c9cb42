@@ -1,0 +1,90 @@
+package lab2;
+
+import java.util.*;
+
+public class Student implements Courses{
+	
+	private static int id = 12;
+	private String name;
+	private String city;
+	private String state;
+	private String phone;
+	private String SSN;
+	private String userID;
+	private static final double fees = 12000.0;
+	private double balance;
+	
+	Random generator = new Random();
+	
+	public Student(String name,String SSN) {
+		this.SSN = SSN;
+		System.out.println("E-mail :- " + name + "@email.com");
+		id++;
+		setUserID();
+	}
+	
+	
+	private void setUserID() {
+		
+		int random = generator.nextInt(9000-1000+1)+1000;
+		userID = id + "" +random + SSN.substring(3);
+		System.out.println("User ID :- " + userID);
+	}
+	
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	
+	public String getPhone() {
+		return phone;
+	}
+	
+	public void setCity(String city) {
+		this.city = city;
+	}
+	
+	public String getCity() {
+		return city;
+	}
+	
+	public void setState(String state) {
+		this.state = state;
+	}
+	
+	public String getState() {
+		return state;
+	}
+	
+	public void enroll(String name) {
+		this.name = name;
+		System.out.println(name + " was Enrolled for ");
+		showCourses();
+	}
+
+	public void pay(double amount) {
+		balance = fees - amount;
+		System.out.println("Paid $" + amount );
+		checkBalance();
+	}
+
+	public void checkBalance() {
+		
+		System.out.println("Balance :- " + balance);
+	}
+
+	@Override
+	public void showCourses() {
+		
+		String course1 = "CSCI213";
+		String course2 = "CSCI205";
+		System.out.println("\t" + course1 + " and " + course2);
+		
+	}
+	
+	@Override
+	public String toString() {
+		return "1.Name - " + name + "\n2.Phone - "+ getPhone()+ "\n3.City - " + getCity() + "\nState - " + getState();
+	}
+	
+
+}

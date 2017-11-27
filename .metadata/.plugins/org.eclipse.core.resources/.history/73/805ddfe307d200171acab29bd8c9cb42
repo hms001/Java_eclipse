@@ -1,0 +1,12 @@
+package lab2;
+
+public class Fees {
+	
+	private double balance;
+	
+	public Fees(double balance) {
+		this.balance = balance;
+		System.out.println("Current balance is " + balance);
+	}
+
+}

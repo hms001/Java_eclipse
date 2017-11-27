@@ -1,0 +1,29 @@
+package lab2;
+
+import java.util.*;
+
+public class Student {
+	
+	private static int id = 12;
+	private String name;
+	private String SSN;
+	private String userID;
+	Random generator = new Random();
+	
+	public Student(String name,String SSN) {
+		this.SSN = SSN;
+		System.out.println("E-mail :- " + name + "@email.com");
+		id++;
+		setUserID();
+	}
+	
+	private void setUserID() {
+		
+		int random = generator.nextInt(9000-1000+1)+1000;
+		userID = id + "" + random + SSN.substring(3);
+		System.out.println(userID);
+	}
+	
+	
+
+}

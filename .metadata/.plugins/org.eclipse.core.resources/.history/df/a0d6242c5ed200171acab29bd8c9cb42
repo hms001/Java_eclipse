@@ -1,0 +1,10 @@
+package lab2;
+
+public interface Fees {
+	
+	double balance = 12000.0;
+	void pay();
+	
+	
+	
+}

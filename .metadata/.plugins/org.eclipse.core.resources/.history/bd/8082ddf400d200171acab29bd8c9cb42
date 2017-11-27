@@ -1,0 +1,11 @@
+package lab2;
+
+public class Fees {
+	
+	private double balance;
+	
+	public Fees(double balance) {
+		
+	}
+
+}

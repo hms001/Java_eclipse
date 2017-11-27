@@ -1,0 +1,18 @@
+package lab2;
+
+public class Account{
+
+	public static void main(String[] args) {
+		
+		Student stud1 = new Student("Sarah","2242799");
+		stud1.setName("Sarah");
+		stud1.setPhone("97670117");
+		stud1.setCity("Los Angeles");
+		stud1.setState("California");
+		System.out.println(stud1.toString());
+		stud1.pay(5000);
+		stud1.enroll();
+
+	}
+
+}

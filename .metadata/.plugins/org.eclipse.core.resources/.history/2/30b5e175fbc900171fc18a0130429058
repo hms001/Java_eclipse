@@ -1,0 +1,24 @@
+import java.util.*;
+public class Ques8 {
+
+	public static void main(String[] args) {
+		
+		Scanner myScanner = new Scanner(System.in);
+		Random generator = new Random();
+		
+		System.out.println("Enter Number Range");
+		System.out.print("First number: ");
+		int first = myScanner.nextInt();
+		//System.out.println();
+		
+		System.out.print("Second number: ");
+		//System.out.println();
+		
+		int second = myScanner.nextInt();
+		int result = generator.nextInt(second)+first;
+		System.out.println(result);
+		
+
+	}
+
+}

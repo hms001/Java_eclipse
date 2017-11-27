@@ -1,0 +1,12 @@
+package lab2;
+
+public class Account{
+
+	public static void main(String[] args) {
+		
+		Student stud1 = new Student("sarah",224279);
+		System.out.println(stud1.uID());
+
+	}
+
+}
