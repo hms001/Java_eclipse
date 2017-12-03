@@ -1,0 +1,15 @@
+package lab3;
+
+import java.io.*;
+
+public class PhoneNumberApp {
+	
+	String phone = "PhoneNumber.dat";
+	File file = new File(phone);
+	String phoneNum = null;
+	public static void main(String[] args) {
+		
+
+	}
+
+}

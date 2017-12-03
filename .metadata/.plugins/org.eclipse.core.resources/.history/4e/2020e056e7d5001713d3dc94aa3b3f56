@@ -1,0 +1,27 @@
+package lab3;
+
+import java.io.*;
+
+public class PhoneNumberApp {
+	
+	
+	public static void main(String[] args) {
+		
+		String fileName = "PhoneNumber.dat";
+		File file = new File(fileName);
+		String phoneNum = null;
+		try {
+			BufferedReader ph = new BufferedReader(new FileReader(file));
+			phoneNum = ph.readLine();
+			ph.close();
+		}catch(FileNotFoundException e){
+			System.out.println("Error: " + file + "file not found");
+		}catch(IOException e) {
+			System.out.println("Error: Not able to read " + file);
+		}
+		
+		System.out.println(phoneNum);
+
+	}
+
+}

@@ -1,0 +1,39 @@
+import java.util.*;
+import java.io.*;
+
+public class PatientApp {
+	
+	//declare an ArrayList to store patient info
+	private static ArrayList<Patient> patList;
+
+	public static void main(String[] args)		
+		throws FileNotFoundException{
+			//create the ArrayList to store Patient objects
+			patList = new ArrayList<Patient>();
+			loadPatientData();
+		}
+		
+		private static void loadPatientData()
+			throws FileNotFoundException{
+				System.out.println("Loading Patient data");
+				Scanner myScanner = new Scanner(new file("Patient.dat"));
+				
+				String patLine;
+				while(myScanner.hasNextLine()) {
+					patLine = myScanner.nextLine();
+					String[] patData = patLine.split(";");
+					String name = patData[0];
+					double height = Double.parseDouble(patData[1]);
+					double weight = Double.parseDouble(patData[2]);
+					//add to ArrayList patList
+					patList.add(new Patient(name,height,weight));
+				}
+				myScanner.close();
+			}		
+			
+}
+		
+
+
+
+

@@ -9,7 +9,7 @@ public class ConsoleInput {
 		// TODO Auto-generated method stub
 		BufferedReader console = new BufferedReader (new InputStreamReader(System.in));
 		
-		System.out.println("Enter a number");
+		System.out.print("Enter a number : ");
 		String response = console.readLine();
 		
 		System.out.println("You have keyed in " + response);
