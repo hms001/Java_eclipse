@@ -1,0 +1,74 @@
+package lab4;
+
+public class CreditCard {
+	
+	private double amount;
+	private double balance = 0.0;
+	private double charge = 0.0;
+	private String date;
+	private String type;
+	private String vendor;
+	
+	
+	public CreditCard(String date,String type,String vendor,double amount) {
+		this.date = date;
+		this.type = type;
+		this.vendor = vendor;
+		this.amount = amount;		
+	}
+	
+	public String getDate() {
+		return date;
+	}
+	
+	public String getType() {
+		return type;
+	}
+	
+	public String getVendor() {
+		return vendor;
+	}
+	
+	public double getAmount() {
+		return amount;
+	}
+	
+	public double balance() {
+		this.balance = this.balance + charge;
+		if(type.equalsIgnoreCase("CREDIT") ) {
+			balance = balance + amount;
+		}
+		else if(type.equalsIgnoreCase("DEBIT")) {
+			balance = balance - amount;
+		}
+		
+		return balance;
+	}
+	
+	public void checkBalance() {
+		this.balance = this.balance + balance;
+		System.out.println();
+	}
+	
+	public void finalStatus() {
+		if(balance > 0) {
+			balance = balance + 0.1;
+			System.out.println("Warning: Your final amount is more than zero.");
+			System.out.println("Charged a 10% fee. Final amount is $" + balance );
+		}
+		else if(balance == 0) {
+			System.out.println("Thank you for your payment");			
+		}
+		else if(balance < 0) {
+			System.out.println("Thank you for your payment");
+			System.out.println("Overpayment $" + amount);
+		}
+			
+	}
+	
+	public String toString() {
+		return ("Date: \t" + date + "\nType: \t" + type +
+				"\nVendor: \t" + vendor + "\namount: \t" + amount);
+	}
+
+}

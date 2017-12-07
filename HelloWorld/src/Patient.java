@@ -35,6 +35,6 @@ public class Patient {
 	//Print object info when called by System.out.println
 	public String toString() {
 		return ("Name: \t" + name + "\nHeight: \t" + height +
-				"\nWeight: \t" + weight);
+				"\nWeight: \t" + weight + "\nBMI: \t" + calculateBMI());
 	}
 }

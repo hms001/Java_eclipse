@@ -65,7 +65,7 @@ public class PhoneNumberApp {
 				
 				System.out.println(phoneNum);			
 			}catch(TenDigitsException e) {
-			
+				
 				System.out.println("Error: phone number is more/less than 10 digits");
 			
 			}catch(AreaCodeException e) {

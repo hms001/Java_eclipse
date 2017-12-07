@@ -1,0 +1,14 @@
+package lab4;
+
+public class CreditCard {
+	
+	private double amount;
+	private double balance = 0.0;
+	private double 
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

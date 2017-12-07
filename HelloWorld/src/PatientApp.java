@@ -1,3 +1,7 @@
+/*
+ * Patient record
+ */
+
 import java.util.*;
 import java.io.*;
 
@@ -34,7 +38,7 @@ public class PatientApp {
 		
 		private static void displayPatientData() {
 			for(Patient pat:patList)
-				System.out.printf("%s\t%3.1f\t%3.1f\t%3.2f\n",
+				System.out.printf("%s\t%3.1f\t%3.1f\t%.4f\n",
 						pat.getName(), pat.getHeight(),
 						pat.getWeight(),pat.calculateBMI());
 		}

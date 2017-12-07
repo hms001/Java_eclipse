@@ -69,8 +69,7 @@ public class Student{
 	
 	public void enroll(String course) {
 		this.course = this.course + "\n" + course;			
-		balance = balance + fees;
-		
+		balance = balance + fees;		
 	}
 
 	public void pay(double amount) {

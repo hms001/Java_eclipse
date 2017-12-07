@@ -39,7 +39,7 @@ public class PasswordLibrary {
 					if(Character.isLetter(check)) {	
 						letter++;					
 					}
-					//increase count if password includes a special characterr
+					//increase count if password includes a special character
 					if(check>=33&&check<=47||check>=58&&check<=64) {	
 						special++;
 					}					

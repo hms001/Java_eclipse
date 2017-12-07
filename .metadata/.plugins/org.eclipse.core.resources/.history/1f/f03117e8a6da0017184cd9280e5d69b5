@@ -1,0 +1,16 @@
+package lab4;
+
+import java.io.*;
+import java.util.ArrayList;
+
+public class CardStatement {
+
+	public static void main(String[] args) {
+		
+		String fileName = "CreditStatement.csv";
+		File file = new File(fileName);
+		ArrayList<String[]> card = new ArrayList<String[]>();
+
+	}
+
+}
