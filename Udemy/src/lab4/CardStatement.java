@@ -21,8 +21,7 @@ public class CardStatement {
 		File file = new File(fileName);
 		ArrayList<CreditCard> card = new ArrayList<CreditCard>();
 		String cards;
-		double finalBalance = 0.0;
-		CreditCard cc = null;	//initialize - not pointing to any object
+		double finalBalance = 0.0;	
 				
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(file));
@@ -42,13 +41,13 @@ public class CardStatement {
 		}
 		
 		for(CreditCard stmt : card) {
-			cc = stmt;	
+			
 			finalBalance = finalBalance + stmt.balance();			
 			System.out.printf("%s\t%s\t%s\t$%3.2f\t$%3.2f\n",
 					stmt.getDate(),stmt.getType(),stmt.getVendor(),stmt.getAmount(),finalBalance);
 									
 		}
-		cc.finalBalance(finalBalance);
+		CreditCard.finalBalance(finalBalance);
 	}
 
 }

@@ -25,7 +25,7 @@ class Bubble{
 				num = nums[i];
 				nums[i] = nums[i+1];
 				nums[i+1] = num;					
-				System.out.println("[Swapped " + nums[i] + " and " + nums[i+1] +"]");
+				System.out.println("[Swapped " + nums[i+1] + " and " + nums[i] +"]");
 				bsort(nums);
 				sorting(nums);	//use recursive method
 			}				

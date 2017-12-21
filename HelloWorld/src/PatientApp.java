@@ -11,7 +11,7 @@ public class PatientApp {
 	private static ArrayList<Patient> patList;	
 	public static void main(String[] args)		
 		throws FileNotFoundException{
-			//create the ArrayList to store Patient objects
+			//create the ArrayList to store Patient objects		
 			patList = new ArrayList<Patient>();
 			loadPatientData();
 			displayPatientData();

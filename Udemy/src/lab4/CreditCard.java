@@ -40,14 +40,11 @@ public class CreditCard {
 		else if(type.equalsIgnoreCase("DEBIT")) {
 			balance = balance - amount;
 		}
-		else{
-			
-		}
 		
 		return balance;
 	}
 	
-	public void finalBalance(double finalBalance) {
+	public static void finalBalance(double finalBalance) {	//static to access directly
 	
 		if(finalBalance > 0) {
 			

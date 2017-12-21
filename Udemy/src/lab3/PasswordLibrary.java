@@ -31,17 +31,17 @@ public class PasswordLibrary {
 				pwd = pwds[i];	//assign each password
 				for(int j=0; j<pwd.length(); j++) {
 					char check = pwd.charAt(j);	//assign each character of password
-					//increase count if password includes a number
+					
 					if(Character.isDigit(check)) {	
-						digit++;				
+						digit++;	//increase count if password includes a number			
 					}
-					//increase count if password includes a letter
+					
 					if(Character.isLetter(check)) {	
-						letter++;					
+						letter++;	//increase count if password includes a letter				
 					}
-					//increase count if password includes a special character
-					if(check>=33&&check<=47||check>=58&&check<=64) {	
-						special++;
+					//ASCII table special character no.
+					if(check>=33&&check<=47||check>=58&&check<=64) { 
+						special++;	//increase count if password includes a special character
 					}					
 				}				
 			//check password is more than 8 character			
